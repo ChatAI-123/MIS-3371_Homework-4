@@ -344,3 +344,55 @@ function reviewInput() {
         document.getElementById("showInput").innerHTML = "";
     }
 }
+
+// Cookie functions
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(cname) == 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
+}
+
+function deleteAllCookies() {
+    document.cookie.split(";").forEach(function(c) {
+        document.cookie = c.trim().split("=")[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const savedName = getCookie("firstName");
+    if (savedName) {
+        document.getElementById("welcome1").innerHTML = "Welcome back, " + savedName + "!";
+        document.getElementById("welcome2").innerHTML = 
+            "Not " + savedName + "? Click here to start a new form.";
+    } else {
+        document.getElementById("welcome1").innerHTML = "Welcome New User!";
+    }
+    
+    const rememberMe = document.getElementById("remember-me").checked;
+    if (!rememberMe) {
+        deleteAllCookies();
+    }
+});
+
+document.getElementById('signup').addEventListener('submit', function(e) {
+    if (document.getElementById('remember-me').checked) {
+        setCookie('firstName', document.getElementById('firstName').value, 2);
+    }
+});
