@@ -2,9 +2,9 @@
 Program Name: style.css
 Name: Andres Cortes
 Date Created: 02/05/2025
-Date Last Edited: 03/09/2025
+Date Last Edited: 05/04/2025
 Version: 2.1
-Description: Homework 2 CSS
+Description: Homework 4 CSS
 Credits: The skeleton of this CSS code is from MISSO. No public link to cite.
 */
 
@@ -12,7 +12,6 @@ Credits: The skeleton of this CSS code is from MISSO. No public link to cite.
     --main-bg-color: rgb(228, 243, 223);
     --margin-bg-color: rgb(97, 144, 75);
     --main-font-family: "optima", sans-serif;
-    --form-fit: 90vh
 }
 
 header {
@@ -44,7 +43,7 @@ footer {
 main {
     flex-grow: 1;
     width: 100%;
-    height: var(--form-fit);
+    height: 90vh;
     padding: 20px 0px;
 }
 
@@ -126,6 +125,16 @@ p.center {
     font-weight: normal;
     width: 75%;
     margin-left: 12.5%;
+}
+
+#welcome1 {
+    font-family: var(--main-font-family);
+    padding-left: 50pt;
+}
+
+#welcome2 {
+    font-family: var(--main-font-family);
+    padding-left: 50pt;
 }
 
 #upper-header {

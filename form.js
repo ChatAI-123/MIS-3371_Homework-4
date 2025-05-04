@@ -1,10 +1,10 @@
 /*
 Program Name: form.js
 Name: Andres Cortes
-Date Created: 02/05/2025
-Date Last Edited: 03/09/2025
-Version: 2.1
-Description: Homework 2 JS
+Date Created: 05/04/2025
+Date Last Edited: 05/04/2025
+Version: 1.0
+Description: Homework 4 JS
 Credits: The skeleton of this JS code is from MISSO. No public link to cite.
 */
 
