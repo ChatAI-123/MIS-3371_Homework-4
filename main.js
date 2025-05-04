@@ -388,20 +388,6 @@ inputs.forEach(function (input) {
     });
 });
 
-var firstName = getCookie("firstName");
-if (firstName !== "") {
-    document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
-    document.getElementById("welcome2").innerHTML =
-        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
-
-    document.getElementById("new-user").addEventListener("click", function () {
-        inputs.forEach(function (input) {
-            setCookie(input.cookieName, "", -1);
-        });
-        location.reload();
-    });
-}
-
 document.getElementById("remember-me").addEventListener("change", function () {
     const rememberMe = this.checked;
 
@@ -434,5 +420,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!rememberMe) {
         deleteAllCookies();
+    }
+
+    var firstName = getCookie("firstName");
+    if (firstName !== "") {
+        document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
+        document.getElementById("welcome2").innerHTML =
+            "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
+
+        document.getElementById("new-user").addEventListener("click", function () {
+            inputs.forEach(function (input) {
+                setCookie(input.cookieName, "", -1);
+            });
+            location.reload();
+        });
     }
 });
