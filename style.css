@@ -1,0 +1,160 @@
+/*
+Program Name: style.css
+Name: Andres Cortes
+Date Created: 02/05/2025
+Date Last Edited: 03/09/2025
+Version: 2.1
+Description: Homework 2 CSS
+Credits: The skeleton of this CSS code is from MISSO. No public link to cite.
+*/
+
+:root {
+    --main-bg-color: rgb(228, 243, 223);
+    --margin-bg-color: rgb(97, 144, 75);
+    --main-font-family: "optima", sans-serif;
+    --form-fit: 1190px
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--margin-bg-color);
+    transition: background-color 0.3s ease;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--main-bg-color);
+    margin: 0;
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 3px;
+    background-color: var(--margin-bg-color);
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    height: var(--form-fit);
+    padding: 20px 0px;
+}
+
+table {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: var(--main-font-family);
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+input {
+    text-align: left;
+    font-family: var(--main-font-family);
+    font-weight: normal;
+}
+
+textarea {
+    text-align: left;
+    font-family: var(--main-font-family);
+    font-weight: normal;
+}
+
+a {
+    color: #0000EE;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+.td1 {
+    text-align: right;
+    vertical-align: top;
+    font-family: var(--main-font-family);
+    font-weight: normal;
+    width: 45%;
+}
+
+.td2 {
+    text-align: left;
+    font-family: var(--main-font-family);
+    font-size: small;
+    font-weight: lighter;
+}
+
+.formFrame {
+    width: 100%;
+    height:100%;
+}
+
+.button-container {
+    text-align: center;
+    margin: 0px 0px;
+}
+
+.error {
+    display: flex;
+    width: 100%;
+    color: red;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.td1Review {
+    width: 50%;
+}
+
+h3.section-header {
+    margin-bottom: 10px
+}
+
+p.center {
+    text-align: center;
+    font-family: var(--main-font-family);
+    font-weight: normal;
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+#upper-header {
+    margin-top: 0px;
+}
+
+#logo-cell {
+    text-align: left;
+    vertical-align: center;
+    width: 20%;
+}
+
+#logo{
+    width: 80px;
+}
+
+#date-cell {
+    text-align: right;
+    vertical-align: bottom;
+    width: 20%;
+}
+
+#date {
+    font-family: var(--main-font-family);
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#contact {
+    text-align: center;
+}
