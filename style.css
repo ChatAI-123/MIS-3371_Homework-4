@@ -70,6 +70,10 @@ textarea {
     font-weight: normal;
 }
 
+iframe {
+    border: none;
+}
+
 a {
     color: #0000EE;
 }
